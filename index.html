@@ -31,6 +31,8 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#product">Product</a></li>
         <li><a href="#store">Store</a></li>
+        <li><a href="checkout.html">checkout</a></li>
+        
         <li><button class="btn">Buy Now</button></li>
       </ul>
     </nav>
@@ -41,8 +43,21 @@
         <img src="assets/header-bg.png" alt="header_bg" class="header-bg" />
         <div class="header__image__content">
           <h4>Price: $100</h4>
-          <button class="btn">Add to cart</button>
+          <button class="btn" data-product-id="00035">Add to cart</button>
+
         </div>
+      </div>
+      <div class="product-card">
+        <img src="product_image.jpg" alt="Product Image">
+        <h3>Product Name</h3>
+        <p>Product Description</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      
+      <div id="cart-module">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <button id="close-cart">Close</button>
       </div>
       <div class="header__content">
         <h1>Bluetooth<br />Headphone</h1>
@@ -102,42 +117,42 @@
             <div class="store__card">
               <h4>Model no- 00035</h4>
               <img src="assets/store-1.png" alt="store" />
-              <h3>Price- $120</h3>
+              <button class="btn">Rs-1200</button>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="store__card">
               <h4>Model no- 00045</h4>
               <img src="assets/store-2.png" alt="store" />
-              <h3>Price- $130</h3>
+              <button class="btn">Rs-1300</button>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="store__card">
               <h4>Model no- 00025</h4>
               <img src="assets/store-3.png" alt="store" />
-              <h3>Price- $110</h3>
+              <button class="btn">Rs-1400</button>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="store__card">
               <h4>Model no- 00055</h4>
               <img src="assets/store-4.png" alt="store" />
-              <h3>Price- $140</h3>
+              <button class="btn">Rs-1500</button>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="store__card">
-              <h4>Model no- 00015</h4>
+              <h4></h4>
               <img src="assets/store-5.png" alt="store" />
-              <h3>Price- $100</h3>
+              <button class="btn">Rs-1600</button>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="store__card">
               <h4>Model no- 00065</h4>
               <img src="assets/store-6.png" alt="store" />
-              <h3>Price- $150</h3>
+              <button class="btn">Rs-999</button>
             </div>
           </div>
         </div>
@@ -163,6 +178,44 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js"></script> 
+
+
+    <div id="product-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modal-product-image" src="" alt="Product Image">
+        <h3 id="modal-product-name">Product Name</h3>
+        <p id="modal-product-description">Product Description</p>
+        <p id="modal-product-price">Price: $100</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <img
+        src="assets/product_image.jpg"
+        alt="Product Image"
+        class="product-image"
+        data-name="Bluetooth Headphone"
+        data-description="High-quality Bluetooth 4.2 headphones with amazing sound."
+        data-price="$100"
+      />
+      <h3>Bluetooth Headphone</h3>
+      <p>High-quality sound with a sleek design.</p>
+    </div>
+    
+    <!-- Modal -->
+    <div id="product-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modal-product-image" src="" alt="Product Image" />
+        <h3 id="modal-product-name">Product Name</h3>
+        <p id="modal-product-description">Product Description</p>
+        <p id="modal-product-price">Price: </p>
+        <button class="btn">Add to Cart</button>
+      </div>
+    </div>
+    
+
   </body>
 </html>
