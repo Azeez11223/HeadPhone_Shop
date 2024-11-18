@@ -1,0 +1,91 @@
+<!-- HTML for the Checkout Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+  <style>
+    checkout-container h1,
+.checkout-container h2 {
+  text-align: center;
+}
+
+.cart-summary {
+  margin-bottom: 20px;
+}
+
+.cart-summary ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-summary li {
+  margin-bottom: 10px;
+}
+
+.total-price {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 10px;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="checkout-container">
+    <h1>Checkout</h1>
+    <div class="cart-summary">
+      <h2>Order Summary</h2>
+      <ul id="checkout-items">
+        <!-- Cart items will be dynamically added here -->
+      </ul>
+      <p class="total-price">Total: $<span id="total-price">0.00</span></p>
+    </div>
+    <form id="checkout-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="address">Shipping Address</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="payment">Payment Method</label>
+      <select id="payment" name="payment">
+        <option value="credit-card">Credit Card</option>
+        <option value="paypal">PayPal</option>
+      </select>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+  <script src="script.js"></script> <!-- Link your JS file -->
+</body>
+</html>
